@@ -110,3 +110,21 @@
         <p>IFRO — Instituto Federal de Rondônia<br>Curso Técnico em Informática — 3º A TI</p>
     </div>
 </div>
+<!-- Contador Numérico Simples -->
+    <div style="text-align: center; margin-top: 30px; padding: 10px; font-family: Arial, sans-serif; color: #555;">
+        <p style="font-size: 14px; margin: 0;">Total de acessos da simulação:</p>
+        <h2 id="contador-visitas" style="font-size: 24px; color: #2C3E50; margin: 5px 0 0 0;">Carregando...</h2>
+    </div>
+
+    <script>
+        fetch('https://api.countapi.xyz/hit/jheniiiiAlvesss-voce-cairia/visitas')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('contador-visitas').innerText = data.value;
+            })
+            .catch(error => {
+                document.getElementById('contador-visitas').innerText = '1';
+            });
+    </script>
+</body>
+</html>
